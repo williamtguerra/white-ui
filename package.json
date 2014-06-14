@@ -1,7 +1,7 @@
 {
-  "name": "White",
+  "name": "white-ui",
   "theme": "ui",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "description": "Minimal white UI theme",
   "repository": "https://github.com/williamtguerra/atom-white-ui",
   "license": "MIT",
