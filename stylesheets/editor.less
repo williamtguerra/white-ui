@@ -1,6 +1,11 @@
 @import "ui-variables";
 @import "ui-mixins";
 
+.editor {
+  font-family: 'Source Code Pro', sans-serif;
+  color: @text-color;
+}
+
 .editor.mini {
   color: @text-color;
   background-color: @input-background-color;
@@ -15,16 +20,19 @@
 
 .editor.editor-colors.mini.is-focused {
   background-color: lighten(@input-background-color, 5%);
-  .selection .region { background-color: lighten(@background-color-info, 30%); }
+  .selection .region { background-color: @base-background-color; }
 }
 
 // FIXME: these should go in syntax themes?
-.editor .gutter.drop-shadow {
-  -webkit-box-shadow: -2px 0 10px 2px #222;
+.editor .gutter {
+    color: @text-color;
+    margin-right: 6px;
+    background: @base-background-color;
+    border-right: 1px solid @base-border-color;
 }
 
 @-webkit-keyframes highlight {
-  from { background-color: rgba(100, 255, 100, 0.7); }
+  from { background-color: @base-background-color; }
   to { background-color: null; }
 }
 
