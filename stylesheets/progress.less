@@ -35,10 +35,13 @@
 // http://css-tricks.com/html5-progress-element/
 
 @progress-height: 16px;
-@progress-shine-gradient: -webkit-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .15));
+@progress-shine-gradient: none;
 
 progress {
   height: @progress-height;
+  border: 1px solid @base-border-color;
+  background: @base-background-color;
+  padding-bottom: 16px;
   -webkit-appearance: none;
 }
 
@@ -46,15 +49,14 @@ progress::-webkit-progress-bar {
   height: @progress-height;
   border-radius: @component-border-radius;
 
-  background-color: #ccc;
+  background-color: #fff;
 
   background-image:
 	   -webkit-linear-gradient(-30deg,
 	                           transparent 33%, rgba(0, 0, 0, .1) 33%,
-	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	                           rgba(0 ,0, 0, .1) 66%, transparent 66%),
 	   @progress-shine-gradient;
 
-  border-radius: 2px;
   background-size: 25px @progress-height, 100% 100%, 100% 100%;
   -webkit-animation: animate-stripes 5s linear infinite;
   animation: animate-stripes 5s linear infinite;
@@ -62,12 +64,11 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   border-radius: @component-border-radius;
-  background-image: @progress-shine-gradient;
   background-color: @background-color-info;
 }
 
 progress[value]::-webkit-progress-bar {
-  background-image: @progress-shine-gradient;
+  background: @base-background-color;
   animation: none;
 }
 
