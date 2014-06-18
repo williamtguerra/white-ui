@@ -1,15 +1,14 @@
 // Colors
 
 @text-color: #000;
-@text-color-subtle: #999;
-@text-color-subtle: #999;
-@text-color-highlight: #666;
+@text-color-subtle: #a3a3a3;
+@text-color-highlight: #fff;
 @text-color-selected: #fff;
 
-@text-color-info: #389cff;
-@text-color-success: #00fc7f;
+@text-color-info: #4cbdc5;
+@text-color-success: #33c49f;
 @text-color-warning: #ff3838;
-@text-color-error: #c00;
+@text-color-error: #a00000;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -17,17 +16,17 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #38ff9c;
-@background-color-success: #00fc7f;
-@background-color-warning: #ff3838;
-@background-color-error: #c00;
-@background-color-highlight: rgba(0, 0, 0, .1);
-@background-color-selected: #000;
+@background-color-info: @text-color-info;
+@background-color-success: @text-color-success;
+@background-color-warning: @text-color-warning;
+@background-color-error: @text-color-error;
+@background-color-highlight: @text-color-subtle;
+@background-color-selected: #d6d6d6;
 
 @app-background-color: #fff;
 
 @base-background-color: #fff;
-@base-border-color: #000;
+@base-border-color: #d6d6d6;
 
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: @base-border-color;
@@ -53,7 +52,7 @@
 @button-border-color: rgba(0, 0, 0, 0.15);
 
 @tab-bar-background-color: #fff;
-@tab-bar-border-color: #000;
+@tab-bar-border-color: @base-border-color;
 @tab-background-color: #fff;
 @tab-background-color-active: #fff;
 @tab-border-color: @base-border-color;

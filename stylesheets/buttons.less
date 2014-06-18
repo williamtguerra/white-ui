@@ -2,33 +2,23 @@
 @import "ui-mixins";
 
 .btn-background (@color, @hover-color, @selected-color, @border-color, @text-color, @text-color-hover) {
-  // @border-shadow: inset 0 0 0 1px @color;
-  // @hover-border-shadow: inset 0 0 0 1px @base-border-color;
-  // @active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
   color: @text-color;
   background-color: @color;
-  box-shadow: none;
-  border-radius: 0;
+  border: 1px solid @base-border-color;
 
   &:hover {
-    color: @color;
+    color: @text-color-selected;
     background: @background-color-selected;
     border-color: @base-border-color;
   }
   &:active,
   &.selected:hover:active {
-    // box-shadow: @active-shadow, @hover-border-shadow;
-  }
-  &.selected,
-  &.selected:hover {
-    color: @text-color-selected;
-    // box-shadow: inset 0 2px 5px rgba(0, 0, 0,.3), @hover-border-shadow;
-    // text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    // background-image: -webkit-linear-gradient(darken(@selected-color, 8%), @selected-color);
+    color: @color;
+    background: @base-background-color;
   }
   &.selected:hover {
-    // box-shadow: @hover-border-shadow;
-    // background-image: -webkit-linear-gradient(@selected-color, darken(@selected-color, 8%));
+    color: @color;
+    background: @base-background-color;
   }
 }
 
