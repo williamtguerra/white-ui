@@ -4,7 +4,7 @@
 .btn-background (@color, @hover-color, @selected-color, @border-color, @text-color, @text-color-hover) {
   color: @text-color;
   background-color: @color;
-  border: 1px solid @base-border-color;
+  border: 1px solid @border-color;
 
   &:hover {
     color: @text-color-selected;
@@ -31,6 +31,8 @@
 }
 
 .btn {
+    border-radius: 0;
+
   .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @button-border-color, @text-color, @text-color-highlight);
 }
 
@@ -48,8 +50,4 @@
 }
 .btn.btn-error {
   .btn-variant(@background-color-error);
-}
-
-.btn-group > .btn {
-  border: none;
 }
