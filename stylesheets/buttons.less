@@ -31,8 +31,7 @@
 }
 
 .btn {
-    border-radius: 0;
-
+  border-radius: 0;
   .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @button-border-color, @text-color, @text-color-highlight);
 }
 
@@ -50,4 +49,14 @@
 }
 .btn.btn-error {
   .btn-variant(@background-color-error);
+}
+
+.btn-group {
+    .btn:last-child,
+    .btn:first-child,
+    .btn:last-child:not(:first-child),
+    .dropdown-toggle {
+        border: 1px solid @base-border-color;
+        border-radius: 0;
+    }
 }
