@@ -11,13 +11,14 @@
     background: @background-color-selected;
     border-color: @base-border-color;
   }
-  &:active,
-  &.selected:hover:active {
-    color: @color;
-    background: @base-background-color;
+  &.selected {
+    color: @text-color;
+    background: @selected-color;
   }
+  &:active,
+  &.selected:hover:active,
   &.selected:hover {
-    color: @color;
+    color: @text-color-hover;
     background: @base-background-color;
   }
 }
@@ -27,12 +28,11 @@
   @hover: @color;
   @selected: @color;
   @border: @color;
-  .btn-background(@bg, @hover, @selected, @border, @text-color-selected, @text-color-selected);
+  .btn-background(@bg, @hover, @selected, @border, #fff, @text-color-selected);
 }
 
 .btn {
-  border-radius: 0;
-  .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @button-border-color, @text-color, @text-color-highlight);
+  .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @button-border-color, @text-color, @text-color-selected);
 }
 
 .btn.btn-primary {
