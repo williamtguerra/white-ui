@@ -2,15 +2,11 @@
 @import "ui-mixins";
 
 atom-text-editor.editor {
-  background-color: @base-background-color;
   color: @text-color;
 
   .gutter {
     margin-right: 100px;
     text-align: left;
-
-    .line-numbers {
-    }
   }
 }
 
@@ -35,9 +31,7 @@ atom-text-editor[mini].is-focused {
 
 // FIXME: these should go in syntax themes?
 atom-text-editor::shadow .gutter {
-  color: @text-color;
   margin-right: 6px;
-  background: @base-background-color;
   border-right: 1px solid @base-border-color;
 }
 
