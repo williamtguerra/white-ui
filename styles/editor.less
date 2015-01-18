@@ -23,9 +23,9 @@ atom-text-editor[mini] {
 
   .cursor { border-color: @text-color; }
   .selection .region {
-      color: @text-color-highlight;
-      background-color: @background-color-selected;
-    }
+    color: @text-color-highlight;
+    background-color: @background-color-selected;
+  }
 }
 
 atom-text-editor[mini].is-focused {
@@ -35,10 +35,10 @@ atom-text-editor[mini].is-focused {
 
 // FIXME: these should go in syntax themes?
 atom-text-editor::shadow .gutter {
-    color: @text-color;
-    margin-right: 6px;
-    background: @base-background-color;
-    border-right: 1px solid @base-border-color;
+  color: @text-color;
+  margin-right: 6px;
+  background: @base-background-color;
+  border-right: 1px solid @base-border-color;
 }
 
 @-webkit-keyframes highlight {
