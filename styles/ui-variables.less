@@ -1,7 +1,7 @@
 // Colors
 
 @text-color: #929292;
-@text-color-subtle: #b3b3b3;
+@text-color-subtle: #cecece;
 @text-color-highlight: #666;
 @text-color-selected: #666;
 
@@ -23,7 +23,7 @@
 @background-color-highlight: @text-color-subtle;
 @background-color-selected: #e6e6e6;
 
-@app-background-color: #fff;
+@app-background-color: #000;
 
 @base-background-color: #fff;
 @base-border-color: #e6e6e6;
@@ -40,7 +40,7 @@
 @inset-panel-background-color: #fff;
 @inset-panel-border-color: fadeout(@base-border-color, 10%);
 
-@panel-heading-background-color: #d6d6d6;
+@panel-heading-background-color: @background-color-highlight;
 @panel-heading-border-color: transparent;
 
 @overlay-background-color: #ececec;
@@ -51,20 +51,20 @@
 @button-background-color-selected: @background-color-selected;
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: #fff;
+@tab-bar-background-color: @base-background-color;
 @tab-bar-border-color: @base-border-color;
 @tab-background-color: #fff;
-@tab-background-color-active: #fff;
+@tab-background-color-active: @base-background-color;
 @tab-border-color: @base-border-color;
 
 @tree-view-background-color: #fff;
 @tree-view-border-color: @base-border-color;
 
-@ui-site-color-1: @background-color-success; // green
-@ui-site-color-2: @background-color-info; // blue
-@ui-site-color-3: #ff10f0; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
+@ui-site-color-1: @text-color-success;
+@ui-site-color-2: @text-color-info;
+@ui-site-color-3: #ff10f0;
+@ui-site-color-4: #db2ff4;
+@ui-site-color-5: #f5e11d;
 
 
 // Sizes

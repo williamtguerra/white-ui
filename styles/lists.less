@@ -1,6 +1,5 @@
 @import "ui-variables";
 @import "ui-mixins";
-@import "octicon-mixins";
 
 .list-group, .list-tree {
   li:not(.list-nested-item),
@@ -44,7 +43,7 @@
   li.two-lines {
     .secondary-line { color: @text-color-subtle; }
     &.selected .secondary-line {
-      color: lighten(@text-color-subtle, 10%);
+      color: #000;
       text-shadow: none;
     }
   }
@@ -75,7 +74,6 @@
       margin-right: @component-icon-padding;
     }
     li.active {
-      .octicon(check, @active-icon-size);
       &:before {
         margin-right: @component-icon-padding;
         color: @text-color-success;
