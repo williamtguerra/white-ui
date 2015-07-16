@@ -30,6 +30,7 @@
         border-right: @tab-border;
         border-left: @tab-border;
         transition: color 0.1s ease-in;
+        opacity: 0.6;
         &,
         &:before {
             background: @tab-background-color;
@@ -42,7 +43,7 @@
             line-height: @tab-height;
             color: @text-color-subtle;
             &:hover {
-                color: @text-color-warning;
+                color: @text-color-error;
             }
         }
         &:nth-child(1) {
@@ -62,8 +63,9 @@
             z-index: 1;
             line-height: @tab-height - 2px;
             color: @text-color;
-            transition: -webkit-flex 1s ease-in-out;
-            transition-delay:0.5s;
+            opacity: 1;
+            transition: -webkit-flex 1s, opacity 0.2s ease-in-out;
+            transition-delay: 0.1s;
             .title {
                 position: relative;
                 top: 1px;
@@ -72,7 +74,7 @@
                 line-height: @tab-height - 1px;
                 color: @text-color;
                 &:hover {
-                    color: @text-color-warning;
+                    color: @text-color-error;
                 }
             }
             &,
@@ -84,12 +86,16 @@
         }
         &.modified {
             color: @text-color-modified;
+            &:hover .close-icon {
+                color: @text-color-modified;
+            }
             .close-icon:hover {
-                color: @text-color-warning;
+                color: @text-color-error;
             }
             &:not(:hover) .close-icon {
                 top: 8px;
                 right: 8px;
+                border: 4px solid @text-color-modified;
             }
         }
     }
