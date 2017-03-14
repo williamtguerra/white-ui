@@ -10,15 +10,15 @@ atom-text-editor {
 
     .gutter {
         text-align: left;
-        margin-right: 0px;
+        margin-right: 0;
 
         &:last-child {
-        border-right: 1px solid @base-border-color;
+            border-right: 1px solid @base-border-color;
 
         }
 
         .line-number {
-            padding-right: 0px;
+            padding-right: 0;
 
             &.cursor-line {
                 background-color: transparent;
@@ -57,7 +57,6 @@ atom-text-editor[mini].is-focused {
         background-color: @background-color-selected;
     }
 }
-
 @-webkit-keyframes highlight {
     from {
         background-color: @base-background-color;
