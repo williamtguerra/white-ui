@@ -2,46 +2,74 @@
 @import "ui-mixins";
 
 atom-text-editor {
-  color: @text-color;
+    color: @text-color;
 
-  .gutter {
-    margin-right: 100px;
-    text-align: left;
-  }
+    .scroll-view {
+        padding-left: 6px;
+    }
+
+    .gutter {
+        text-align: left;
+        margin-right: 0px;
+
+        &:last-child {
+        border-right: 1px solid @base-border-color;
+
+        }
+
+        .line-number {
+            padding-right: 0px;
+
+            &.cursor-line {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .selection {
+        .region {
+            background-color: @background-color-selected;
+        }
+    }
 }
 
 atom-text-editor[mini] {
-  color: @text-color;
-  background-color: @input-background-color;
-  border: 1px solid @input-border-color;
-  border-radius: @component-border-radius;
-  padding-left: @component-padding/2;
+    color: @text-color;
+    background-color: @input-background-color;
+    border: 1px solid @input-border-color;
+    border-radius: @component-border-radius;
+    padding-left: @component-padding/2;
 
-  .cursor { border-color: @text-color; }
-  .selection .region {
-    color: @text-color-highlight;
-    background-color: @background-color-selected;
-  }
+    .cursor {
+        border-color: @text-color;
+    }
+
+    .selection .region {
+        color: @text-color-highlight;
+        background-color: @background-color-selected;
+    }
 }
 
 atom-text-editor[mini].is-focused {
-  background-color: lighten(@input-background-color, 5%);
-  .selection .region { background-color: @background-color-selected; }
-}
+    background-color: lighten(@input-background-color, 5%);
 
-// FIXME: these should go in syntax themes?
-atom-text-editor::shadow .gutter {
-  margin-right: 6px;
-  border-right: 1px solid @base-border-color;
+    .selection .region {
+        background-color: @background-color-selected;
+    }
 }
 
 @-webkit-keyframes highlight {
-  from { background-color: @base-background-color; }
-  to { background-color: null; }
+    from {
+        background-color: @base-background-color;
+    }
+
+    to {
+        background-color: null;
+    }
 }
 
 atom-text-editor .highlighted.selection .region {
-  -webkit-animation-name: highlight;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
+    -webkit-animation-name: highlight;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
 }

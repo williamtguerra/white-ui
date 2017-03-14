@@ -1,27 +1,17 @@
 @import "ui-variables";
 
 .tree-view {
-	font-size: @font-size;
-	background: @tree-view-background-color;
+    font-size: @font-size;
+    background: @tree-view-background-color;
 
-	.selected:before {
-		background: @background-color-selected;
-	}
-}
+    .selected:before {
+        background: @background-color-selected;
+    }
 
-.focusable-panel {
-
-	&:focus {
-
-		.selected:before {
-			background: @background-color-selected;
-		}
-
-		.selected > .name,
-		.selected > .name:before,
-		.selected > .list-item > .name,
-		.selected > .list-item > .name:before {
-			color: #000;
-		}
-	}
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before,
+    .selected > .name,
+    .selected > .name:before {
+        color: #000;
+    }
 }
