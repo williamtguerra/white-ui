@@ -1,0 +1,40 @@
+@import "ui-variables";
+
+.atom-dock-inner {
+    &.atom-dock-open {
+        &.left {
+            border-right: 1px solid @base-border-color;
+        }
+
+        &.bottom {
+            border-top: 1px solid @base-border-color;
+        }
+        &.right {
+            border-left: 1px solid @base-border-color;
+        }
+
+        &.top {
+            border-bottom: 1px solid @base-border-color;
+        }
+    }
+}
+.atom-dock-resize-handle {
+    position: absolute;
+    padding: 2px;
+    z-index: 3;
+    transition: background-color 0.2s ease-in;
+
+    &:hover, &:active {
+        background-color: rgba(200, 200, 200, 0.15);
+    }
+
+    &.left , &.right {
+        top: 0;
+        bottom: 0;
+    }
+
+    &.bottom, &.top {
+        left: 0;
+        right: 0;
+    }
+}
